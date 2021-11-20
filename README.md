@@ -1,2 +1,2 @@
 # Frontend-Example
-frontend tutorials
+frontend tutorial
