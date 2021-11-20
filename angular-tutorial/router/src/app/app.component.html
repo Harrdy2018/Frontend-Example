@@ -1,0 +1,21 @@
+<a [routerLink]="['/home']">home</a>
+<br>
+<a [routerLink]="['/product']">product</a>
+<br>
+<!--实际请求 http://localhost:4202/product/10-->
+<a [routerLink]="['/product', 10]">在请求路径中携带数据</a>
+<br>
+<!--实际请求 http://localhost:4202/product?id=1-->
+<a [routerLink]="['/product']" [queryParams]="{id:1}">在请求查询参数中传递参数</a>
+<br>
+<!--时件绑定-->
+<input type="button" value="商品详情" (click)="toProductDetails()">
+<br>
+<!--辅助路由-->
+<a [routerLink]="[{outlets:{primary:'home',aux: 'chat'}}]">聊天也要跳到home界面</a>
+<br>
+<a [routerLink]="[{outlets:{aux: 'chat'}}]">开始聊天</a>
+<a [routerLink]="[{outlets:{aux: null}}]">结束聊天</a>
+<br>
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
