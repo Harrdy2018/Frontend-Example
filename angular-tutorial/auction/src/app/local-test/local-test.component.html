@@ -1,0 +1,13 @@
+<p>this is local test component</p>
+<!--数据绑定：使用小括号将组建控制器的一个方法绑定为模板上一个事件的处理器-->
+<button (click)="toProductDetail()">商品详情</button>
+<!--
+小括号表示这是一个事件绑定
+input：事件的名称
+onInputEvent：组件方法名称
+$event：浏览器事件对象
+-->
+<hr>
+<input (input)="onInputEvent($event)">
+<button (click)="saved = true">save</button>
+<button (click)="saved = false">cancel</button>

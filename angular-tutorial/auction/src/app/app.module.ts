@@ -12,10 +12,12 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductService } from './shared/product.service';
+import { LocalTestComponent } from './local-test/local-test.component';
 
 const routeConfig: Routes = [
   {path:"", component:HomeComponent},
-  {path:"product/:productId", component:ProductDetailComponent}
+  {path:"product/:productId", component:ProductDetailComponent},
+  {path:"test", component:LocalTestComponent},
 ]
 
 @NgModule({
@@ -28,7 +30,8 @@ const routeConfig: Routes = [
     ProductComponent,
     StarsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    LocalTestComponent
   ],
   imports: [
     BrowserModule,

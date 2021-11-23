@@ -1,7 +1,9 @@
 <div *ngFor="let product of products" class="col-md-4 col-sm-4 col-lg-4">
     <div class="thumbnail">
+        <!--数据绑定：使用方括号将HTML标签的一个属性绑定到一个表达式上-->
         <img [src]="imgUrl">
         <div class="caption">
+            <!--数据绑定：使用插值表达式将一个表达式的值显示在模板上-->
             <h4 class="pull-right">{{product.price}}元</h4>
             <h4><a [routerLink]="['/product', product.id]">{{product.title}}</a></h4>
             <p>{{product.desc}}</p>
