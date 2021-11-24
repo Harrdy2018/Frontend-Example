@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductService } from './shared/product.service';
 import { LocalTestComponent } from './local-test/local-test.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './pipe/filter.pipe';
 
 const routeConfig: Routes = [
   {path:"", component:HomeComponent},
@@ -31,11 +33,14 @@ const routeConfig: Routes = [
     StarsComponent,
     ProductDetailComponent,
     HomeComponent,
-    LocalTestComponent
+    LocalTestComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routeConfig)
+    RouterModule.forRoot(routeConfig),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
