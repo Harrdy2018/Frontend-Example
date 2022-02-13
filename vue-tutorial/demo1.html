@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let person = {
+            name:"zhangsan",
+            age:18
+        }
+        // 模拟 vue2响应式
+        /*
+        let p = {};
+        Object.defineProperty(p, 'name', {
+            configurable:true,
+            get(){
+                console.log("有人读取了name");
+                return person.name;
+            },
+            set(value){
+                console.log("有人修改了name");
+                person.name=value;
+            }
+        });
+        Object.defineProperty(p, 'age', {
+            get(){
+                console.log("有人读取了age");
+                return person.age;
+            },
+            set(value){
+                console.log("有人修改了age");
+                person.age=value;                
+            }
+        });
+        */
+
+        // 模拟 vue3响应式
+        /*
+        const p = new Proxy(person, {
+            // 读取属性
+            get(target, propName){
+                console.log("有人读取了p身上的某个属性", target, propName);
+                return target[propName];
+            },
+            // 修改属性或者增加属性
+            set(target, propName, value){
+                console.log("有人修改了p身上的某个属性", target, propName, value);
+                target[propName]=value;
+            },
+            // 删除属性
+            deleteProperty(target, propName){
+                console.log("有人删除了p身上的某个属性", target, propName);
+                return delete target[propName];
+            }
+        });
+        */
+
+        // vue3响应式雏形
+        const p = new Proxy(person, {
+            // 读取属性
+            get(target, propName){
+                console.log("有人读取了p身上的某个属性", target, propName);
+                return Reflect.get(target, propName);
+            },
+            // 修改属性或者增加属性
+            set(target, propName, value){
+                console.log("有人修改了p身上的某个属性", target, propName, value);
+                return Reflect.set(target, propName, value);
+            },
+            // 删除属性
+            deleteProperty(target, propName){
+                console.log("有人删除了p身上的某个属性", target, propName);
+                return Reflect.deleteProperty(target, propName);
+            }
+        });
+    </script>
+</body>
+</html>
