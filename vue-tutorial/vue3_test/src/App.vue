@@ -8,6 +8,10 @@
   <ExampleThree/>
   <p>----------------------------------------------------</p>
   <ExampleFour/>
+  <p>----------------------------------------------------</p>
+  <ExampleFive msg="hello mi" school="NJUPT">
+    
+  </ExampleFive>
 </template>
 
 <script>
@@ -16,6 +20,7 @@ import ExampleOne from "./components/ExampleOne.vue"
 import ExampleTwo from "./components/ExampleTwo.vue"
 import ExampleThree from "./components/ExampleThree.vue"
 import ExampleFour from "./components/ExampleFour.vue"
+import ExampleFive from "./components/ExampleFive.vue"
 
 export default {
   name: 'App',
@@ -25,6 +30,7 @@ export default {
     ExampleTwo,
     ExampleThree,
     ExampleFour,
+    ExampleFive,
   }
 }
 </script>
