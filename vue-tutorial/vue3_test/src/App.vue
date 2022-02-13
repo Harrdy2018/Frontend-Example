@@ -6,6 +6,8 @@
   <ExampleTwo/>
   <p>----------------------------------------------------</p>
   <ExampleThree/>
+  <p>----------------------------------------------------</p>
+  <ExampleFour/>
 </template>
 
 <script>
@@ -13,6 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import ExampleOne from "./components/ExampleOne.vue"
 import ExampleTwo from "./components/ExampleTwo.vue"
 import ExampleThree from "./components/ExampleThree.vue"
+import ExampleFour from "./components/ExampleFour.vue"
 
 export default {
   name: 'App',
@@ -21,6 +24,7 @@ export default {
     ExampleOne,
     ExampleTwo,
     ExampleThree,
+    ExampleFour,
   }
 }
 </script>
