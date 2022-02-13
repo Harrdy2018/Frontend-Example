@@ -1,4 +1,5 @@
 ## 创建Vue3.0工程 ```https://cli.vuejs.org/zh/guide/```
+* ```vue-cli```可以创建vue2以及vue3项目
 ### 使用vue-cli创建
 * vue --version
 * npm install -g @vue/cli
