@@ -21,6 +21,8 @@
   </ExampleFive>
   <p>----------------------------------------------------</p>
   <ExampleSix/>
+  <p>----------------------------------------------------</p>
+  <ExampleSeven/>
 </template>
 
 <script>
@@ -31,6 +33,7 @@ import ExampleThree from "./components/ExampleThree.vue"
 import ExampleFour from "./components/ExampleFour.vue"
 import ExampleFive from "./components/ExampleFive.vue"
 import ExampleSix from "./components/ExampleSix.vue"
+import ExampleSeven from "./components/ExampleSeven.vue"
 
 export default {
   name: 'App',
@@ -42,6 +45,7 @@ export default {
     ExampleFour,
     ExampleFive,
     ExampleSix,
+    ExampleSeven,
   },
   setup(){
     function showHelloMsg(value){
