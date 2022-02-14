@@ -23,6 +23,19 @@
   <ExampleSix/>
   <p>----------------------------------------------------</p>
   <ExampleSeven/>
+  <hr>
+  具名插槽名字:<input type="text" v-model="slotName">
+  <v-switch :case="slotName">
+    <template #foo>
+      <div>foo</div>
+    </template>
+    <template #bar>
+      <div>bar</div>
+    </template>
+    <template #default>
+      <div>default</div>
+    </template>
+  </v-switch>
 </template>
 
 <script>
@@ -35,6 +48,10 @@ import ExampleFive from "./components/ExampleFive.vue"
 import ExampleSix from "./components/ExampleSix.vue"
 import ExampleSeven from "./components/ExampleSeven.vue"
 
+// 组件封装
+import {ref} from "vue"
+import VSwitch from "./components/VSwitch.vue"
+
 export default {
   name: 'App',
   components: {
@@ -46,13 +63,16 @@ export default {
     ExampleFive,
     ExampleSix,
     ExampleSeven,
+    VSwitch
   },
   setup(){
+    let slotName = ref("foo");
+
     function showHelloMsg(value){
       alert(`hello! you emit hello event.i receive param ${value}`)
     }
 
-    return {showHelloMsg}
+    return {showHelloMsg, slotName};
   }
 }
 </script>
