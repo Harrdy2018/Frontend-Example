@@ -19,6 +19,8 @@
       <p>具名插槽BBB</p>
     </template>
   </ExampleFive>
+  <p>----------------------------------------------------</p>
+  <ExampleSix/>
 </template>
 
 <script>
@@ -28,6 +30,7 @@ import ExampleTwo from "./components/ExampleTwo.vue"
 import ExampleThree from "./components/ExampleThree.vue"
 import ExampleFour from "./components/ExampleFour.vue"
 import ExampleFive from "./components/ExampleFive.vue"
+import ExampleSix from "./components/ExampleSix.vue"
 
 export default {
   name: 'App',
@@ -38,6 +41,7 @@ export default {
     ExampleThree,
     ExampleFour,
     ExampleFive,
+    ExampleSix,
   },
   setup(){
     function showHelloMsg(value){
