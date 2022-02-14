@@ -4,6 +4,12 @@
         <h1>the information of a person</h1>
         <h2 v-show="person.name">name:{{person.name}}</h2>
         <h2 v-show="person.age">sex:{{person.age}}</h2>
+        <h2>父组件给子组件传值</h2>
+        <h3>msg:{{msg}}--school:{{school}}</h3>
+        <button @click="test">组件触发事件</button>
+        <h2>插槽</h2>
+        <slot></slot>
+        <slot name="qwer"></slot>
     </div>
 </template>
   
@@ -12,6 +18,7 @@ import {reactive} from 'vue'
 export default {
     name: 'ExampleFive',
     props:['msg', 'school'],
+    emits:['hello'],
     beforeCreate(){
         console.log("---beforeCreate start----", this)
     },
@@ -23,7 +30,11 @@ export default {
             age : 17
         });
 
-        return {person};
+        function test(){
+            context.emit('hello', 6666);
+        }
+
+        return {person, test};
     }
 }
 </script>

@@ -9,8 +9,15 @@
   <p>----------------------------------------------------</p>
   <ExampleFour/>
   <p>----------------------------------------------------</p>
-  <ExampleFive msg="hello mi" school="NJUPT">
-    
+  <ExampleFive @hello="showHelloMsg" msg="hello mi" school="NJUPT">
+    <p>默认插槽AAA</p>
+    <p>默认插槽BBB</p>
+    <template v-slot:qwer>
+      <p>具名插槽AAA</p>
+    </template>
+    <template v-slot:QWER>
+      <p>具名插槽BBB</p>
+    </template>
   </ExampleFive>
 </template>
 
@@ -31,6 +38,13 @@ export default {
     ExampleThree,
     ExampleFour,
     ExampleFive,
+  },
+  setup(){
+    function showHelloMsg(value){
+      alert(`hello! you emit hello event.i receive param ${value}`)
+    }
+
+    return {showHelloMsg}
   }
 }
 </script>
