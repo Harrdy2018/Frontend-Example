@@ -39,18 +39,19 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import ExampleOne from "./components/ExampleOne.vue"
-import ExampleTwo from "./components/ExampleTwo.vue"
-import ExampleThree from "./components/ExampleThree.vue"
-import ExampleFour from "./components/ExampleFour.vue"
-import ExampleFive from "./components/ExampleFive.vue"
-import ExampleSix from "./components/ExampleSix.vue"
-import ExampleSeven from "./components/ExampleSeven.vue"
+// @ is an alias to '/src'
+import HelloWorld from '@/components/HelloWorld.vue'
+import ExampleOne from "@/components/ExampleOne.vue"
+import ExampleTwo from "@/components/ExampleTwo.vue"
+import ExampleThree from "@/components/ExampleThree.vue"
+import ExampleFour from "@/components/ExampleFour.vue"
+import ExampleFive from "@/components/ExampleFive.vue"
+import ExampleSix from "@/components/ExampleSix.vue"
+import ExampleSeven from "@/components/ExampleSeven.vue"
 
 // 组件封装
 import {ref} from "vue"
-import VSwitch from "./components/VSwitch.vue"
+import VSwitch from "@/components/VSwitch.vue"
 
 export default {
   name: 'App',
