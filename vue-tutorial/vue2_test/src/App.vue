@@ -16,6 +16,8 @@
         <p>具名插槽BBB</p>
       </template>
     </ExampleTwo>
+    <hr>
+    <Parent></Parent>
   </div>
 </template>
 
@@ -23,6 +25,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import ExampleOne from './components/ExampleOne.vue'
 import ExampleTwo from './components/ExampleTwo.vue'
+import Parent from './components/Parent.vue'
 
 export default {
   name: 'App',
@@ -30,6 +33,7 @@ export default {
     HelloWorld,
     ExampleOne,
     ExampleTwo,
+    Parent
   }
 }
 </script>
