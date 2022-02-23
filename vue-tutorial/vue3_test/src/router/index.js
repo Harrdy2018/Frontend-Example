@@ -13,9 +13,24 @@ const routes = [
         component: ()=> import("@/views/eleGrid.vue")
     },
     {
+        path: '/helpForm',
+        name: 'helpForm',
+        component: ()=> import("@/views/helpForm.vue")
+    },
+    {
+        path: '/eleBase',
+        name: 'eleBase',
+        component: ()=> import("@/views/eleBase.vue")
+    },
+    {
         path: '/study',
         name: 'study',
         component: ()=> import("@/views/study.vue")
+    },
+    {
+        path: '/sendMessage',
+        name: 'sendMessage',
+        component: ()=> import("@/views/SendMessageExample/Parent.vue")
     }
 ]
 
